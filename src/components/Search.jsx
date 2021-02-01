@@ -77,54 +77,59 @@ const Search = (props) => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       className="searchBar px-1">
-      <div className="input-group mb-3 ">
-        <div className="input-group-prepend">
-          <span className="input-group-text">City</span>
-        </div>
-        <input
-          aria-label="Enter a City Name"
-          id="cityInput"
-          className="form-control"
-          type="text"
-          placeholder="Enter a City Name"
-          aria-describedby="button-addon1"
-          onChange={handleCityChange}></input>
+      <form action="#" onSubmit={handleCity}>
+        <div className="input-group mb-3 ">
+          <div className="input-group-prepend">
+            <span className="input-group-text">City</span>
+          </div>
 
-        <div className="input-group-append">
-          <button
-            aria-label="Click to search for restaurants in city"
-            className="btn btn-light text-dark btn-outline-secondary"
-            onClick={handleCity}
-            type="button"
-            id="button-addon1">
-            Search
-          </button>
-        </div>
-      </div>
+          <input
+            aria-label="Enter a City Name"
+            id="cityInput"
+            className="form-control"
+            type="text"
+            placeholder="Enter a City Name"
+            aria-describedby="button-addon1"
+            onChange={handleCityChange}></input>
 
-      <div className={"input-group mb-3 " + props.refDisplay}>
-        <div className="input-group-prepend">
-          <span className="input-group-text">Refine</span>
+          <div className="input-group-append">
+            <button
+              aria-label="Click to search for restaurants in city"
+              className="btn btn-light text-dark btn-outline-secondary"
+              onClick={handleCity}
+              type="button"
+              id="button-addon1">
+              Search
+            </button>
+          </div>
         </div>
-        <input
-          aria-label="Enter Keyword to Refine Search"
-          className="form-control"
-          type="text"
-          placeholder="Enter Keyword to Refine Search"
-          aria-describedby="button-addon2"
-          onChange={handleRefChange}></input>
+      </form>
 
-        <div className="input-group-append">
-          <button
-            aria-label="Click to refine restaurant search with keyword"
-            className="btn btn-light text-dark btn-outline-secondary"
-            onClick={handleRefine}
-            type="button"
-            id="button-addon2">
-            Refine
-          </button>
+      <form action="#" onSubmit={handleRefine}>
+        <div className={"input-group mb-3 " + props.refDisplay}>
+          <div className="input-group-prepend">
+            <span className="input-group-text">Refine</span>
+          </div>
+          <input
+            aria-label="Enter Keyword to Refine Search"
+            className="form-control"
+            type="text"
+            placeholder="Enter Keyword to Refine Search"
+            aria-describedby="button-addon2"
+            onChange={handleRefChange}></input>
+
+          <div className="input-group-append">
+            <button
+              aria-label="Click to refine restaurant search with keyword"
+              className="btn btn-light text-dark btn-outline-secondary"
+              onClick={handleRefine}
+              type="button"
+              id="button-addon2">
+              Refine
+            </button>
+          </div>
         </div>
-      </div>
+      </form>
     </motion.div>
   );
 };
