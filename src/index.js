@@ -10,6 +10,9 @@ const initialState = {
   refInput: "",
   cityInput: "",
   restaurants: [],
+  refDisplay: "hidden",
+  errorMsg: "",
+  error: "hidden",
 };
 
 function reducer(state = initialState, action) {
@@ -28,6 +31,23 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         refInput: action.refSearch,
+      };
+    case "CHANGE_HIDDEN":
+      return {
+        ...state,
+        refDisplay: action.display,
+      };
+    case "CHANGE_ERROR":
+      return {
+        ...state,
+        error: "",
+        errorMsg: action.msg,
+      };
+    case "CHANGE_NO_ERROR":
+      return {
+        ...state,
+        error: "hidden",
+        errorMsg: "",
       };
 
     default:

@@ -1,3 +1,10 @@
+# Restaurant Search App
+
+This is an app that let's you input a city to return top rated restaurants within that city. There is also a refine option to further narrow down your search with any keyword.\
+This app uses the zomato api: https://developers.zomato.com/api\
+
+Application is hosted and can be visited at http://jdonne.github.io/restaurant-search
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

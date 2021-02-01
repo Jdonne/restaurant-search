@@ -2,9 +2,11 @@
   text-align: center;
 }
 
+/* buttons */
 button {
   border-radius: 0 0.25rem 0.25rem 0 !important;
 }
+/* restaurant card */
 .resCard {
   width: 25%;
   background-color: rgb(255, 249, 241);
@@ -13,27 +15,33 @@ img {
   object-fit: cover;
   height: 200px;
 }
-.address {
+.subhead {
   margin-right: 0.5em;
 }
 
+/* search bar */
 .searchBar {
   width: 50%;
+}
+
+/* hidden elements */
+.hidden {
+  display: none;
+
+  /* page title */
 }
 h1 {
   font-family: "Fraunces", serif;
 }
 
+/* tablet */
 @media screen and (max-width: 770px) {
   .resCard {
     width: 33%;
   }
-  /* img {
-    height: 45%;
-  } */
 }
-
-@media screen and (max-width: 412px) {
+/* mobile */
+@media screen and (max-width: 426px) {
   .resCard {
     width: 100%;
   }

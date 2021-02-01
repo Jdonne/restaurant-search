@@ -26,8 +26,8 @@ describe("Card", () => {
     expect(span.length).toBe(1);
   });
   it("Descriptions rendered successfully", () => {
-    const button = wrapper.find("div.address");
-    expect(button.length).toBe(3);
+    const button = wrapper.find("div.subhead");
+    expect(button.length).toBe(4);
   });
   it("Name of Restaurants rendered correctly", () => {
     const button = wrapper.find(".name");
