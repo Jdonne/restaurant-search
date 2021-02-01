@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { connect } from "react-redux";
+import Search from "./components/Search";
+import Display from "./components/Display";
+import "./App.css";
 
-function App() {
+const App = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="d-flex flex-column align-items-center">
+      <h1 className="my-2" id="title">
+        Restaurant Search
+      </h1>
+      <Search />
+      <Display />
     </div>
   );
-}
+};
 
-export default App;
+const mapStateToProps = (state) => ({
+  city: state.city,
+  restaurants: state.restaurants,
+});
+
+export default connect(mapStateToProps)(App);

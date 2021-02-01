@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Button successfully clicked 1`] = `ReactWrapper {}`;
+
+exports[`Search City Button successfully clicked 1`] = `ReactWrapper {}`;
+
+exports[`Search City Button successfully clicked and called 1`] = `ReactWrapper {}`;
+
+exports[`Search Refine Button successfully clicked 1`] = `ReactWrapper {}`;
+
+exports[`Search Refine Button successfully clicked and called 1`] = `ReactWrapper {}`;
+
+exports[`Search should be possible to activate button with Spacebar 1`] = `ReactWrapper {}`;

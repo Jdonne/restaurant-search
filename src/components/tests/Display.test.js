@@ -2,7 +2,7 @@ import React from "react";
 import Enzyme, { shallow, mount } from "enzyme";
 import { Provider } from "react-redux";
 import configureMockStore from "redux-mock-store";
-import App from "./App";
+import Display from "../Display";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -10,24 +10,19 @@ Enzyme.configure({ adapter: new Adapter() });
 const mockStore = configureMockStore();
 const store = mockStore({});
 
-describe("App", () => {
+describe("Display", () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(
       <Provider store={store}>
-        <App />
+        <Display />
       </Provider>
     );
   });
   it("Component rendered successfully", () => {
-    const comp = wrapper.find(<App />);
+    const comp = wrapper.find(<Display />);
     wrapper.update();
     expect(comp).toMatchSnapshot();
-  });
-  it("Title semantics used correctly", () => {
-    const span = wrapper.find("div h1#title");
-
-    expect(span.length).toBe(0);
   });
 });
