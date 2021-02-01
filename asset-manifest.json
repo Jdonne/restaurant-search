@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/restaurant-search/static/css/main.ce9dd42e.chunk.css",
-    "main.js": "/restaurant-search/static/js/main.24cba1c3.chunk.js",
-    "main.js.map": "/restaurant-search/static/js/main.24cba1c3.chunk.js.map",
+    "main.js": "/restaurant-search/static/js/main.e9f48d44.chunk.js",
+    "main.js.map": "/restaurant-search/static/js/main.e9f48d44.chunk.js.map",
     "runtime-main.js": "/restaurant-search/static/js/runtime-main.35b8846d.js",
     "runtime-main.js.map": "/restaurant-search/static/js/runtime-main.35b8846d.js.map",
     "static/js/2.172ea916.chunk.js": "/restaurant-search/static/js/2.172ea916.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.35b8846d.js",
     "static/js/2.172ea916.chunk.js",
     "static/css/main.ce9dd42e.chunk.css",
-    "static/js/main.24cba1c3.chunk.js"
+    "static/js/main.e9f48d44.chunk.js"
   ]
 }
