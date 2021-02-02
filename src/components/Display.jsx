@@ -8,7 +8,7 @@ const Display = (props) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 3 }}
-      className="list-unstyled d-flex p-0 flex-wrap justify-content-center display">
+      className="list-unstyled d-flex p-0 flex-wrap justify-content-center display px-2">
       {props.restaurants.map((res, index) => (
         <Card
           resImg={res.restaurant.featured_image}

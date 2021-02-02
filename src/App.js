@@ -11,7 +11,7 @@ const App = (props) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className="my-2"
+        className="my-3"
         id="title">
         Restaurant Search
       </motion.h1>

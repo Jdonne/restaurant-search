@@ -33,7 +33,16 @@ A new feature for bootstrap 5 that I've used/enjoyed is the ability to color lin
 
 # How would you track down a performance issue in production? Have you ever had to do this?
 
-For React I would use devTools to profile components. The performance tab lets you record and trace if components are mounting, updating, and unmounted at what times, and frequencies. It is important to check lifecycle functions to avoid loops in performance. I have never had to do the former but the latter I've implemented as a precedent.
+First I would try to diagnose the problem to have a more methodic approach. Different issues require different tools, and it would be a waste of time and resources to try to fix something when you don't know where the problem lies.\
+
+For api related problems, we can look at the network tab in devtools. It can give you the time, timeline and requests of api calls.\
+
+For React components I would use devTools to profile components. The performance tab lets you record and trace if components are mounting, updating, and unmounted at what times, and frequencies.\
+Redux devtools can also track state and component history\
+
+It is also important to check lifecycle functions to avoid loops in performance.\
+
+I don't have much experience testing performance issues but I believe a diagnostic approach is best. Assessment of problems leads to more efficient and accurate solutions.
 
 # How would you improve the API that you just used?
 

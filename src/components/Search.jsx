@@ -31,7 +31,6 @@ const Search = (props) => {
       if (zomatoCity.location_suggestions !== []) {
         props.dispatch({ type: "CHANGE_NO_ERROR", cityRes });
         cityId = zomatoCity.location_suggestions[0].id;
-        console.log(cityId);
         resFetch();
         props.dispatch({ type: "CHANGE_HIDDEN", display: "visibile" });
       }
@@ -64,10 +63,12 @@ const Search = (props) => {
       console.log("error");
     }
   }
-  const handleCity = () => {
+  const handleCity = (e) => {
+    e.preventDefault();
     cityFetch();
   };
-  const handleRefine = () => {
+  const handleRefine = (e) => {
+    e.preventDefault();
     cityFetch();
   };
 
@@ -76,11 +77,16 @@ const Search = (props) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="searchBar px-1">
-      <form action="#" onSubmit={handleCity}>
+      className="searchBar px-2 pt-2">
+      <form onSubmit={handleCity}>
+        <div className="visually-hidden">
+          Updating input and clicking search will change results
+        </div>
         <div className="input-group mb-3 ">
           <div className="input-group-prepend">
-            <span className="input-group-text">City</span>
+            <span id="cityspan" className="input-group-text">
+              City
+            </span>
           </div>
 
           <input
@@ -89,7 +95,7 @@ const Search = (props) => {
             className="form-control"
             type="text"
             placeholder="Enter a City Name"
-            aria-describedby="button-addon1"
+            aria-describedby="cityspan"
             onChange={handleCityChange}></input>
 
           <div className="input-group-append">
@@ -97,25 +103,29 @@ const Search = (props) => {
               aria-label="Click to search for restaurants in city"
               className="btn btn-light text-dark btn-outline-secondary"
               onClick={handleCity}
-              type="button"
-              id="button-addon1">
+              type="button">
               Search
             </button>
           </div>
         </div>
       </form>
 
-      <form action="#" onSubmit={handleRefine}>
+      <form onSubmit={handleRefine}>
+        <div className="visually-hidden">
+          Updating input and clicking search will change results
+        </div>
         <div className={"input-group mb-3 " + props.refDisplay}>
           <div className="input-group-prepend">
-            <span className="input-group-text">Refine</span>
+            <span id="refinespan" className="input-group-text">
+              Refine
+            </span>
           </div>
           <input
             aria-label="Enter Keyword to Refine Search"
             className="form-control"
             type="text"
             placeholder="Enter Keyword to Refine Search"
-            aria-describedby="button-addon2"
+            aria-describedby="refinespan"
             onChange={handleRefChange}></input>
 
           <div className="input-group-append">
@@ -123,8 +133,7 @@ const Search = (props) => {
               aria-label="Click to refine restaurant search with keyword"
               className="btn btn-light text-dark btn-outline-secondary"
               onClick={handleRefine}
-              type="button"
-              id="button-addon2">
+              type="button">
               Refine
             </button>
           </div>
