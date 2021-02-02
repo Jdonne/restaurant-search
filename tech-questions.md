@@ -64,7 +64,8 @@ I would have the /search request implement a filter for cities to determine enti
       "fantasy": "Yahoo"
     },
     "books": {
-      "genres": ["sci-fi", "fantasy", "fiction"]
+      "genres": ["sci-fi", "fantasy", "fiction"],
+      "url": "https://www.goodreads.com/review/list/10695699-eric-tien?shelf=read"
     },
     "boardgames": {
       "categories": ["social", "euro", "tabletop", "resource management"]
