@@ -4,7 +4,7 @@ I spent around 6 hours on this assignment. If I had more time I would add more r
 
 # What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.
 
-I quite like hooks from react which lets you use states in stateless functions. Lifecycle hooks are also very convenient to modify with useEffect. It can pass through states as a parameter to monitor any updates: \
+I quite like hooks from react which lets you use states in stateless functions. Lifecycle hooks are also very convenient to modify with useEffect. It can pass through states as a parameter to monitor any updates:
 
 ```javascript
 useEffect(() => {
@@ -27,20 +27,20 @@ useEffect(() => {
   }, [search, nomList]);
 ```
 
-In this example I used the hook to monitor two states akin to componentDidUpdate lifecycle. And when the states are updated, the api is called\
+In this example I used the hook to monitor two states akin to componentDidUpdate lifecycle. And when the states are updated, the api is called.
 
 A new feature for bootstrap 5 that I've used/enjoyed is the ability to color links on class and control hover color as well.
 
 # How would you track down a performance issue in production? Have you ever had to do this?
 
-First I would try to diagnose the problem to have a more methodic approach. Different issues require different tools, and it would be a waste of time and resources to try to fix something when you don't know where the problem lies.\
+First I would try to diagnose the problem to have a more methodic approach. Different issues require different tools, and it would be a waste of time and resources to try to fix something when you don't know where the problem lies.
 
-For api related problems, we can look at the network tab in devtools. It can give you the time, timeline and requests of api calls.\
+For api related problems, we can look at the network tab in devtools. It can give you the time, timeline and requests of api calls.
 
-For React components I would use devTools to profile components. The performance tab lets you record and trace if components are mounting, updating, and unmounted at what times, and frequencies.\
-Redux devtools can also track state and component history\
+For React components I would use devTools to profile components. The performance tab lets you record and trace if components are mounting, updating, and unmounted at what times, and frequencies.  
+Redux devtools can also track state and component history.
 
-It is also important to check lifecycle functions to avoid loops in performance.\
+It is also important to check lifecycle functions to avoid loops in performance.
 
 I don't have much experience testing performance issues but I believe a diagnostic approach is best. Assessment of problems leads to more efficient and accurate solutions.
 
