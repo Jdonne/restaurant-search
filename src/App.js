@@ -16,7 +16,7 @@ const App = (props) => {
         Restaurant Search
       </motion.h1>
       <Search />
-      <p>{props.errorMsg}</p>
+      <p className={props.error}>{props.errorMsg}</p>
       <Display />
     </div>
   );
@@ -26,6 +26,7 @@ const mapStateToProps = (state) => ({
   city: state.city,
   restaurants: state.restaurants,
   errorMsg: state.errorMsg,
+  error: state.error,
 });
 
 export default connect(mapStateToProps)(App);

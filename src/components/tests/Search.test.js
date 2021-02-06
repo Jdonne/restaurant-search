@@ -26,16 +26,16 @@ describe("Search", () => {
     expect(span.length).toBe(2);
   });
   it("Button rendered correctly", () => {
-    const button = wrapper.find("button#button-addon1");
+    const button = wrapper.find("button#btn1");
     expect(button.text()).toBe("Search");
   });
   it("City Button successfully clicked and called", () => {
-    wrapper.find("button#button-addon1").simulate("click");
+    wrapper.find("button#btn1").simulate("click");
     expect(wrapper).toMatchSnapshot();
     wrapper.unmount();
   });
   it("Refine Button successfully clicked and called", () => {
-    wrapper.find("button#button-addon2").simulate("click");
+    wrapper.find("button#btn2").simulate("click");
     expect(wrapper).toMatchSnapshot();
     wrapper.unmount();
   });

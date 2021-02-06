@@ -73,13 +73,13 @@ const Search = (props) => {
   };
 
   return (
-    <motion.div
+    <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       className="searchBar px-2 pt-2">
       <form onSubmit={handleCity}>
-        <div className="visually-hidden">
+        <div className="sr-only">
           Updating input and clicking search will change results
         </div>
         <div className="input-group mb-3 ">
@@ -103,7 +103,8 @@ const Search = (props) => {
               aria-label="Click to search for restaurants in city"
               className="btn btn-light text-dark btn-outline-secondary"
               onClick={handleCity}
-              type="button">
+              type="button"
+              id="btn1">
               Search
             </button>
           </div>
@@ -111,7 +112,7 @@ const Search = (props) => {
       </form>
 
       <form onSubmit={handleRefine}>
-        <div className="visually-hidden">
+        <div className="sr-only">
           Updating input and clicking search will change results
         </div>
         <div className={"input-group mb-3 " + props.refDisplay}>
@@ -133,13 +134,14 @@ const Search = (props) => {
               aria-label="Click to refine restaurant search with keyword"
               className="btn btn-light text-dark btn-outline-secondary"
               onClick={handleRefine}
-              type="button">
+              type="button"
+              id="btn2">
               Refine
             </button>
           </div>
         </div>
       </form>
-    </motion.div>
+    </motion.section>
   );
 };
 
